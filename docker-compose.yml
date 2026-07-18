@@ -28,7 +28,7 @@ services:
       - DB_NAME=pos_db
       - DB_PORT=3306
     ports:
-      - "8000:8000"
+      - "8888:8000"
 
   frontend:
     build:
@@ -39,7 +39,7 @@ services:
     depends_on:
       - backend
     ports:
-      - "80:80"
+      - "9999:80"
 
 volumes:
   mysql_data:
